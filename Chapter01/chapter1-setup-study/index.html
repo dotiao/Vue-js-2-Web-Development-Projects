@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Project Guide setup</title>
+</head>
+<body>
+<!-- 将库添加到这里 -->
+<!-- 引入Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<!-- 一些HTML代码 -->
+<div id="root">
+    <!--    <p>Is this an Hello world?</p>-->
+    <p>{{message}}</p>
+    <input v-model="message">
+</div>
+
+<!-- 一些JavaScript代码 -->
+<script>
+    console.log('Yes! We are using Vue version', Vue.version)
+    var app = new Vue({
+        el: '#root',
+        name: 'MyApp',
+        data() {
+            return {
+                message: 'Hello Vue.js! Awesome!'
+            }
+        }
+    })
+</script>
+</body>
+</html>
