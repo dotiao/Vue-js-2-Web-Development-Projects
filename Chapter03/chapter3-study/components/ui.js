@@ -27,3 +27,15 @@ Vue.component('card', {
         },
     },
 })
+
+Vue.component('hand', {
+    props: ['cards'],
+    template: `<div class="hand">
+        <div class="wrapper">
+<!--            卡牌-->
+            <div>
+                <card v-for="card of cards" v-bind:key="card.id" :def="card.def" />
+            </div>
+        </div>
+    </div>`,
+})
